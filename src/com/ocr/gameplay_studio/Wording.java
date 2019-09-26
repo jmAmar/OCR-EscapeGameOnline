@@ -30,7 +30,7 @@ public class Wording
     ;
 
     static final String MENU_JEU
-    = "\n\n\t\t** Menu **"
+    = "\n\n\t\t** Menu Jeu **"
     + "\n- mode CHALLENGER\t:  1"
     + "\n- mode DEFENDER\t\t:  2"
     + "\n- mode DUEL\t\t\t:  3"
@@ -56,4 +56,14 @@ public class Wording
     = "\n\n\t\t** Nouvelle Partie **"
     + "\n... La partie démarre ..."
     ;
+
+    static final String MENU_PARTIE_CHALLENGER
+    = "\n\n\t\t** Menu Partie Challenger**"
+    + "\n- lancer la Partie\t\t:  1"
+    + "\n- quitter la Partie\t\t:  2"
+    + "\n- quitter Challenger\t:  3"
+    + "\n- quitter le Jeu\t\t:  9"
+    ;
+
 }
+/**/

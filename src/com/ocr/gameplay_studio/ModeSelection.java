@@ -4,31 +4,30 @@ import java.util.Scanner;
 
 public class ModeSelection
 {
-    private Scanner scn ;
-    private int chx;
+    private Scanner scanner ;
+    private int choix = -1;
 
     public ModeSelection()
-    {   scn = new Scanner(System.in);
-        chx = 0;
+    {   scanner = new Scanner(System.in);
         System.out.print(Wording.MENU_JEU);
     }
 
     public void selectGameMode()
     {   System.out.print("\n\n\t\tvotre choix ?  ");
-        try { chx = scn.nextInt(); }
+        try { choix = scanner.nextInt(); }
         catch(Exception Err) {}
-        System.out.print("\t\tvotre choix :  " + String.valueOf(chx));
-        switch(chx)
+        System.out.print("\t\tvotre choix :  " + String.valueOf(choix));
+        switch(choix)
         {   case 9:
             {   System.out.print("  --QUITTER le Jeu--");
                 System.out.print(Wording.AU_REVOIR);
+                scanner.close();
+                System.exit(0);
                 break;
             }
             case 1:
             {   System.out.println("  --CHALLENGER--");
                 ChallengerMode challenger = new ChallengerMode();
-                challenger.setCombination();
-                challenger.runChallengertSet();
                 break;
             }
             case 2:
@@ -41,8 +40,9 @@ public class ModeSelection
             }
             default:
             {
-                System.out.print("  ! choix invalide !");
+                System.out.print("\n  ! choix invalide !");
                 new EscapeGameOnline().selectGameMode();
+                break;
             }
         }
     }
