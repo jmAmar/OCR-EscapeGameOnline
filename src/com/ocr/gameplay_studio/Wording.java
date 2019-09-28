@@ -18,8 +18,8 @@ public class Wording
     static final String DESCRIPTION_JEU
     = "\n\t\t** Description Générale **"
     + "\nCe jeu est inspiré de celui où une équipe de joueurs est enfermée dans une pièce."
-    + "\nPour en sortir ils doivent résoudre des égnimes scénarisées."
-    + "\nDans notre jeu les égnimes sont concrétisées par des séries de chiffres (de 1 à 9) à deviner et/ou déduire."
+    + " Pour en sortir ils doivent résoudre des égnimes scénarisées."
+    + "\nDans notre jeu les égnimes sont concrétisées par des séries de chiffres (de 0 à 9) à deviner et/ou déduire."
     + "\nLe nombre de chiffres de chaque série est déterminé en début de partie (4 par défaut)."
     + "\nUn chiffre peut être redondant une ou plusieurs fois dans une même série (exemples: 12325 , 2222)."
     + "\n3 modes sont proposés :"
@@ -31,15 +31,15 @@ public class Wording
 
     static final String MENU_JEU
     = "\n\n\t\t** Menu Jeu **"
-    + "\n- mode CHALLENGER\t:  1"
-    + "\n- mode DEFENDER\t\t:  2"
-    + "\n- mode DUEL\t\t\t:  3"
+    + "\n- Mode CHALLENGER\t:  1"
+    + "\n- Mode DEFENDER\t\t:  2"
+    + "\n- Mode DUEL\t\t\t:  3"
     + "\n- QUITTER le Jeu\t:  9"
     ;
 
     static final String DESCRIPTION_CHALLENGER
     = "\n\t\t** Description du Mode Challenger **"
-    + "\nLe logiciel génère aléatoirement une combinaison de chiffres entre 1 et 9 (4 par défaut)."
+    + "\nLe logiciel génère aléatoirement une combinaison de chiffres entre 0 et 9 (4 par défaut)."
     + "\nUn même chiffre peut être contenu une ou plusieurs fois dans la même combinaison."
     + "\nIl vous demande ensuite de saisir les chiffres que vous pensez composer la combinaison."
     + "\nA la fin de votre saisie le logiciel vous indique un résultat intermédiaire sous forme de chaîne contenant des \"=\", \"-\", ou \"+\""
@@ -59,10 +59,10 @@ public class Wording
 
     static final String MENU_PARTIE_CHALLENGER
     = "\n\n\t\t** Menu Partie Challenger**"
-    + "\n- lancer la Partie\t\t:  1"
-    + "\n- quitter la Partie\t\t:  2"
-    + "\n- quitter Challenger\t:  3"
-    + "\n- quitter le Jeu\t\t:  9"
+    + "\n- Lancer la Partie\t\t:  1"
+    + "\n- Quitter la Partie\t\t:  2"
+    + "\n- Quitter Challenger\t:  3"
+    + "\n- Quitter le Jeu\t\t:  9"
     ;
 
 }

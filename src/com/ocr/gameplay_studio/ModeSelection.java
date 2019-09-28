@@ -12,7 +12,7 @@ public class ModeSelection
         System.out.print(Wording.MENU_JEU);
     }
 
-    public void selectGameMode()
+    public void selectMode()
     {   System.out.print("\n\n\t\tvotre choix ?  ");
         try { choix = scanner.nextInt(); }
         catch(Exception Err) {}
@@ -39,10 +39,8 @@ public class ModeSelection
                 break;
             }
             default:
-            {
-                System.out.print("\n  ! choix invalide !");
+            {   System.out.print("\n  ! choix invalide !");
                 new EscapeGameOnline().selectGameMode();
-                break;
             }
         }
     }

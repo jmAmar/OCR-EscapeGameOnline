@@ -17,8 +17,8 @@ public class EscapeGameOnline
     /**/
 
     void selectGameMode()
-    {   ModeSelection mode = new ModeSelection();
-        mode.selectGameMode();
+    {   ModeSelection selection = new ModeSelection();
+        selection.selectMode();
     }
     /**/
 
@@ -34,4 +34,3 @@ public class EscapeGameOnline
 
 }
 /**/
-
