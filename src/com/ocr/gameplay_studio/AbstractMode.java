@@ -8,12 +8,17 @@ public abstract class AbstractMode
     protected Scanner scanner;
     protected int choix = -1;
     protected int nbChiffres = 4;
-    protected int nbEssais = 3;
+    protected int noChiffre = 1;
+    protected int nbEssais = 5;
+    protected int noEssai = 1;
+    protected int[][] serieEssais;
     protected int[] combinaison;
     protected int[] serieJoueur;
+    protected String saisieJoueur = "";
+    protected String[] resultatEssai;
     protected String[] serieChiffres;
-    protected String reponseJoueur = "";
-    protected String resultatEssai = "";
+    protected String caractere = "";
+    protected String[] serieCaracteres;
     ;
 
     public AbstractMode()
@@ -23,9 +28,7 @@ public abstract class AbstractMode
 
     protected abstract void showMenu();
     protected abstract void runMatch();
-    protected abstract void setCombination();
-    protected abstract String runTest();
-    protected abstract String computeTest();
+    protected abstract String runTrial(int noEssai);
 
     protected String showResult(String rslt)
     {   String string = "";
@@ -47,7 +50,38 @@ public abstract class AbstractMode
    public void exitMode()
    {   scanner.close();
    }
-   /**/
+    /**/
 
+    public void exitGame()
+    {   System.out.print(Wording.AU_REVOIR);
+        this.exitMode();
+        System.exit(0);
+    }
+    /**/
+
+    protected void inputDigits()
+    {   System.out.print("\n\tvos " + nbChiffres + " chiffres\t?  ");
+        saisieJoueur = scanner.next();
+        //System.out.println(saisieJoueur + "  " + saisieJoueur.length());
+        if(saisieJoueur.length() < nbChiffres)
+            this.inputDigits();
+        if(saisieJoueur.length() > nbChiffres)
+            saisieJoueur = saisieJoueur.substring(0, nbChiffres);
+        for(int i = 0; i < saisieJoueur.length(); i++)
+        {   char chr = saisieJoueur.charAt(i);
+            if(! Character.isDigit(chr))
+            {   this.inputDigits();
+                break;
+            }
+        }
+    }
+    /**/
+
+    protected void convertDigits()
+    {   serieChiffres = saisieJoueur.split("");
+        for(int i = 0; i < nbChiffres; i++)
+            serieJoueur[i] = Integer.parseInt(serieChiffres[i]);
+    }
+    /**/
 }
 /**/

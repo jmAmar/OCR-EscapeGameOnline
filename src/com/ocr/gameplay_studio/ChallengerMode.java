@@ -6,6 +6,7 @@ public class ChallengerMode extends AbstractMode
 {
     public ChallengerMode()
     {   super();
+        resultatEssai = new String[nbEssais];
         combinaison = new int[nbChiffres];
         serieJoueur = new int[nbChiffres];
         System.out.print(Wording.DESCRIPTION_CHALLENGER);
@@ -13,18 +14,18 @@ public class ChallengerMode extends AbstractMode
     }
     /**/
 
-    protected void setCombination()
+    protected void setRandomDigits()
     {   Random random = new Random();
         for (int i = 0; i < nbChiffres; i++)
             combinaison[i] = random.nextInt(9+1);
     }
     /**/
 
-    protected void showCombination()
+    protected void showRandomDigits()
     {   String chiffresCombinaison = "";
         for(int i = 0; i < combinaison.length; i++)
             chiffresCombinaison += combinaison[i];
-        System.out.println("\n\tcombinaison \t:  " + chiffresCombinaison);
+        System.out.print("\n\tcombinaison \t:  " + chiffresCombinaison + "\n");
     }
     /**/
 
@@ -36,34 +37,33 @@ public class ChallengerMode extends AbstractMode
         System.out.print("\t\t\tvotre choix :  " + String.valueOf(choix));
         switch(choix)
         {   case 1:
-            {   System.out.println("  --Lancer la Partie--");
-                setCombination();
-                showCombination();;
+            {   System.out.println("  >> Lancer la Partie");
+                setRandomDigits();
+                showRandomDigits();;
                 scanner.nextLine();
                 this.runMatch();
                 break;
             }
             case 2:
-            {   System.out.println("  --Quitter la Partie--");
+            {   System.out.println("  >> Quitter la Partie");
                 new EscapeGameOnline().selectGameMode();
                 break;
             }
             case 3:
-            {   System.out.print("  --Quitter Challenger--");
+            {   System.out.print("  >> Quitter Challenger");
                 ModeSelection selection = new ModeSelection();
                 selection.selectMode();
                 break;
             }
             case 9:
-            {   System.out.print("  --Quitter le Jeu--");
-                System.out.print(Wording.AU_REVOIR);
-                this.exitMode();
-                System.exit(0);
+            {   System.out.print("  >> Quitter le Jeu");
+                this.exitGame();
                 break;
             }
             default:
             {   System.out.print("  ! choix invalide !\n");
                 new ChallengerMode();
+                break;
             }
         }
     }
@@ -71,14 +71,13 @@ public class ChallengerMode extends AbstractMode
 
     protected void runMatch()
     {   System.out.print("\n\t! saisie de " + nbChiffres + " chiffres entre 0 et 9 !\n");
-        for(int i = 0; i < nbEssais; i++)
-        {   System.out.print("\n\t--essai no." + (i+1) + "--\n");
-            String resultat = this.runTest();
-            //System.out.print("\tresultat \t\t:  " + resultat + "\n");
-            System.out.print(showResult(resultat) + "\n");
-            if(resultat.equals("===="))
-            {
-                System.out.print("\t! partie gagnée ! félicitations !");
+        for(noEssai = 1; noEssai <= nbEssais; noEssai++)
+        {   System.out.print("\n\t--essai no." + (noEssai) + "--\n");
+            resultatEssai[noEssai] = this.runTrial(noEssai);
+            //System.out.print("\tresultat essai\t:  " + resultatEssai + "\n");
+            System.out.print(showResult(resultatEssai[noEssai]) + "\n");
+            if(resultatEssai[noEssai].equals("===="))
+            {   System.out.print("\t! vous avez gagné la partie ! félicitations !");
                 this.showMenu();
                 break;
             }
@@ -86,47 +85,27 @@ public class ChallengerMode extends AbstractMode
     }
     /**/
 
-    protected String runTest()
-    {   resultatEssai = "";
-        this.inputTest();
-        serieChiffres = reponseJoueur.split("");
-        for(int i = 0; i < nbChiffres; i++)
-            serieJoueur[i] = Integer.parseInt(serieChiffres[i]);
-        return this.computeTest();
+    protected String runTrial(int noEssai)
+    {   resultatEssai[noEssai] = "";
+        this.inputDigits();
+        this.convertDigits();
+        return this.computeTrial(noEssai);
     }
     /**/
 
-    protected String computeTest()
+    protected String computeTrial(int noEssai)
     {   for (int i = 0; i < nbChiffres; i++)
         {   if (combinaison[i] == serieJoueur[i])
-                resultatEssai += "=";
+                resultatEssai[noEssai] += "=";
             else if (combinaison[i] < serieJoueur[i])
-                resultatEssai += "-";
+                resultatEssai[noEssai] += "-";
             else
-             resultatEssai += "+";
+                resultatEssai[noEssai] += "+";
         }
-        return resultatEssai;
+        return resultatEssai[noEssai];
     }
     /**/
 
-    protected void inputTest()
-    {   System.out.print("\tvos " + nbChiffres + " chiffres\t?  ");
-        reponseJoueur = scanner.nextLine();
-        if(reponseJoueur.length() < nbChiffres)
-            this.inputTest();
-        if(reponseJoueur.length() > nbChiffres)
-        {   reponseJoueur = reponseJoueur.substring(0, nbChiffres);
-            System.out.print("\tvos " + nbChiffres + " chiffres\t:  " + reponseJoueur + "\n");
-        }
-        for(int i = 0; i < reponseJoueur.length(); i++)
-        {   char chr = reponseJoueur.charAt(i);
-            if(! Character.isDigit(chr))
-            {   this.inputTest();
-                break;
-            }
-        }
-    }
-    /**/
 
 }
 /**/

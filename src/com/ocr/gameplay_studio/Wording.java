@@ -38,18 +38,34 @@ public class Wording
     ;
 
     static final String DESCRIPTION_CHALLENGER
-    = "\n\t\t** Description du Mode Challenger **"
+        = "\n\t\t** Description du Mode Challenger **"
+        + "\nLe logiciel génère aléatoirement une combinaison de chiffres entre 0 et 9 (4 par défaut)."
+        + "\nUn même chiffre peut être contenu une ou plusieurs fois dans la même combinaison."
+        + "\nIl vous demande ensuite de saisir les chiffres que vous pensez composer la combinaison."
+        + "\nA la fin de votre saisie le logiciel vous indique un résultat intermédiaire sous forme de chaîne contenant des \"=\", \"-\", ou \"+\""
+        + " relativement à la position de chaque chiffre."
+        + "\n\"=\" signifie que le chiffre de la combinaison est égal à celui saisi."
+        + "\n\"-\" signifie que le chiffre de la combinaison est plus petit que celui saisi."
+        + "\n\"+\" signifie que le chiffre de la combinaison est plus grand que celui saisi."
+        + "\nExemple: si la combinaison générée est 3562 est que vous avez saisi les chiffres 1264, le résultat intermédiaire sera ++=-."
+        + "\nLe nombre d'essais (générant des résultats intermédiaires) est limité."
+        + "\nLe résultat final de la partie est celui de votre dernier essai."
+        ;
+
+    static final String DESCRIPTION_DEFENDER
+    = "\n\t\t** Description du Mode Defender **"
+    + "\nVous, le joueur, définissez une combinaison de chiffres entre 0 et 9 (4 par défaut)."
     + "\nLe logiciel génère aléatoirement une combinaison de chiffres entre 0 et 9 (4 par défaut)."
     + "\nUn même chiffre peut être contenu une ou plusieurs fois dans la même combinaison."
-    + "\nIl vous demande ensuite de saisir les chiffres que vous pensez composer la combinaison."
-    + "\nA la fin de votre saisie le logiciel vous indique un résultat intermédiaire sous forme de chaîne contenant des \"=\", \"-\", ou \"+\""
+    + "\nPar ses traitements, le logiciel doit deviner votre combinaison."
+    + "\nA la fin de chaque essai de sa part, le logiciel exprime un résultat intermédiaire sous forme de chaîne contenant des \"=\", \"-\", ou \"+\""
     + " relativement à la position de chaque chiffre."
     + "\n\"=\" signifie que le chiffre de la combinaison est égal à celui saisi."
     + "\n\"-\" signifie que le chiffre de la combinaison est plus petit que celui saisi."
     + "\n\"+\" signifie que le chiffre de la combinaison est plus grand que celui saisi."
-    + "\nExemple: si la combinaison générée est 3562 est que vous avez saisi les chiffres 1264, le résultat intermédiaire sera ++=-."
+    + "\nExemple: si la combinaison que vous avez saisie est 3562 est que lors d'une essai le logiciel sort 1264, le résultat intermédiaire sera ++=-."
     + "\nLe nombre d'essais (générant des résultats intermédiaires) est limité."
-    + "\nLe résultat final de la partie est celui de votre dernier essai."
+    + "\nLe résultat final de la partie est celui du dernier essai."
     ;
 
     static final String NOUVELLE_PARTIE
@@ -59,6 +75,14 @@ public class Wording
 
     static final String MENU_PARTIE_CHALLENGER
     = "\n\n\t\t** Menu Partie Challenger**"
+    + "\n- Lancer la Partie\t\t:  1"
+    + "\n- Quitter la Partie\t\t:  2"
+    + "\n- Quitter Challenger\t:  3"
+    + "\n- Quitter le Jeu\t\t:  9"
+    ;
+
+    static final String MENU_PARTIE_DEFENDER
+    = "\n\n\t\t** Menu Partie Defender**"
     + "\n- Lancer la Partie\t\t:  1"
     + "\n- Quitter la Partie\t\t:  2"
     + "\n- Quitter Challenger\t:  3"
