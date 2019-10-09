@@ -1,7 +1,5 @@
 package com.ocr.gameplay_studio;
 
-import java.util.Random;
-
 public class DefenderMode extends AbstractMode
 {
     public DefenderMode()
@@ -11,15 +9,24 @@ public class DefenderMode extends AbstractMode
         serieJoueur = new int[nbChiffres];
         serieEssais = new int[nbEssais][nbChiffres];
         serieCaracteres = new String[nbChiffres];
-        System.out.print(Wording.DESCRIPTION_DEFENDER);
+        if(GameSetting.parametreDescription.equals("O"))
+            System.out.print(GameWording.DESCRIPTION_DEFENDER);
         showMenu();
     }
     /**/
 
+    protected void showDescription(boolean enabled)
+    {   if(enabled == true)
+        GameSetting.parametreDescription = "O";
+        else
+        GameSetting.parametreDescription = "N";
+    }
+    /**/
+
     protected void showMenu()
-    {   System.out.print(Wording.MENU_PARTIE_DEFENDER);
+    {   System.out.print(GameWording.MENU_PARTIE_DEFENDER);
         System.out.print("\n\n\t\t\tvotre choix ?  ");
-        try { choix = scanner.nextInt(); }
+        try { choix = GameExecution.scanner.nextInt(); }
         catch(Exception Err) {}
         System.out.print("\t\t\tvotre choix :  " + String.valueOf(choix));
         switch(choix)
@@ -32,7 +39,7 @@ public class DefenderMode extends AbstractMode
         }
             case 2:
             {   System.out.println("  >> Quitter la Partie");
-                new EscapeGameOnline().selectGameMode();
+                new GameExecution().selectMode();
                 break;
             }
             case 3:
@@ -69,7 +76,8 @@ public class DefenderMode extends AbstractMode
     /**/
 
     protected void runMatch()
-    {   for(noEssai = 0; noEssai < nbEssais; noEssai++)
+    {   System.out.print("\n\t! partie en " + nbEssais + "essais maximum !\n");
+        for(noEssai = 0; noEssai < nbEssais; noEssai++)
         {   System.out.print("\n\t--essai no." + (noEssai+1) + "--\n");
             resultatEssai[noEssai] = "";
             resultatEssai[noEssai] = this.runTrial(noEssai);
@@ -79,7 +87,7 @@ public class DefenderMode extends AbstractMode
             //System.out.print("\tresultat\t\t:  " + resultatEssai[noEssai] + "\n");
             System.out.print(showResult(resultatEssai[noEssai]) + "\n");
             if(resultatEssai[noEssai].equals("===="))
-            {   System.out.print("\t! partie gagnée par le logiciel !");
+            {   System.out.print("\t! partie gagnée par le logiciel en " + (noEssai+1) + " essais !");
                 this.showMenu();
                 break;
             }

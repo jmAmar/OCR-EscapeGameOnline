@@ -1,16 +1,15 @@
 package com.ocr.gameplay_studio;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public abstract class AbstractMode
 {
-    protected Scanner scanner;
     protected int choix = -1;
-    protected int nbChiffres = 4;
+	protected int nbEssais = Integer.parseInt(GameSetting.readProperty("nombreEssais" , GameSetting.getNumberOfTrials()));
+	protected int noEssai = 1;
+    protected int nbChiffres = Integer.parseInt(GameSetting.readProperty("nombreChiffres" , GameSetting.getNumberOfDigits()));
     protected int noChiffre = 1;
-    protected int nbEssais = 5;
-    protected int noEssai = 1;
+
     protected int[][] serieEssais;
     protected int[] combinaison;
     protected int[] serieJoueur;
@@ -22,13 +21,14 @@ public abstract class AbstractMode
     ;
 
     public AbstractMode()
-    {   scanner = new Scanner(System.in);
-    }
+    {}
     /**/
 
+    protected abstract void showDescription(boolean enabled);
     protected abstract void showMenu();
     protected abstract void runMatch();
     protected abstract String runTrial(int noEssai);
+
 
     protected String showResult(String rslt)
     {   String string = "";
@@ -48,12 +48,12 @@ public abstract class AbstractMode
     /**/
 
    public void exitMode()
-   {   scanner.close();
+   {   GameExecution.scanner.close();
    }
     /**/
 
     public void exitGame()
-    {   System.out.print(Wording.AU_REVOIR);
+    {   System.out.print(GameWording.AU_REVOIR);
         this.exitMode();
         System.exit(0);
     }
@@ -61,7 +61,7 @@ public abstract class AbstractMode
 
     protected void inputDigits()
     {   System.out.print("\n\tvos " + nbChiffres + " chiffres\t?  ");
-        saisieJoueur = scanner.next();
+        saisieJoueur = GameExecution.scanner.next();
         //System.out.println(saisieJoueur + "  " + saisieJoueur.length());
         if(saisieJoueur.length() < nbChiffres)
             this.inputDigits();
@@ -83,5 +83,6 @@ public abstract class AbstractMode
             serieJoueur[i] = Integer.parseInt(serieChiffres[i]);
     }
     /**/
+
 }
 /**/
