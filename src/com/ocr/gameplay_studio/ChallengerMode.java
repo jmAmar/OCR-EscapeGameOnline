@@ -9,17 +9,11 @@ public class ChallengerMode extends AbstractMode
         resultatEssai = new String[nbEssais];
         combinaison = new int[nbChiffres];
         serieJoueur = new int[nbChiffres];
-        if(GameSetting.parametreDescription.equals("O"))
-            System.out.print(GameWording.DESCRIPTION_CHALLENGER);
-        showMenu();
     }
     /**/
 
     protected void showDescription(boolean enabled)
-    {   if(enabled == true)
-        GameSetting.parametreDescription = "O";
-        else
-        GameSetting.parametreDescription = "N";
+    {   if(enabled == true) { System.out.print(GameWording.DESCRIPTION_CHALLENGER); }
     }
     /**/
 
@@ -34,7 +28,7 @@ public class ChallengerMode extends AbstractMode
     {   String chiffresCombinaison = "";
         for(int i = 0; i < combinaison.length; i++)
             chiffresCombinaison += combinaison[i];
-        System.out.print("\n\tcombinaison \t:  " + chiffresCombinaison + "\n");
+        System.out.print("\n\tcombinaison secrète\t:  " + chiffresCombinaison + "\n");
     }
     /**/
 
@@ -46,7 +40,8 @@ public class ChallengerMode extends AbstractMode
         System.out.print("\t\t\tvotre choix :  " + String.valueOf(choix));
         switch(choix)
         {   case 1:
-            {   System.out.println("  >> Lancer la Partie");
+            {   System.out.print("  >> Lancer la Partie\n");
+                System.out.print(GameWording.NOUVELLE_PARTIE);
                 setRandomDigits();
                 showRandomDigits();;
                 GameExecution.scanner.nextLine();
@@ -54,7 +49,7 @@ public class ChallengerMode extends AbstractMode
                 break;
             }
             case 2:
-            {   System.out.println("  >> Quitter la Partie");
+            {   System.out.print("  >> Quitter la Partie");
                 new GameExecution().selectMode();
                 break;
             }
@@ -79,13 +74,14 @@ public class ChallengerMode extends AbstractMode
     /**/
 
     protected void runMatch()
-    {   System.out.print("\n\t! partie en " + nbEssais + " essais maximum !");
-        System.out.print("\n\t! saisissez " + nbChiffres + " chiffres entre 0 et 9 !\n");
-        for(noEssai = 1; noEssai <= nbEssais; noEssai++)
-        {   System.out.print("\n\t--essai no." + (noEssai) + "--\n");
+    {    System.out.print("\n\t! partie en " + nbEssais + " essais maximum !");
+        System.out.print("\n\t! combinaisons de " + nbChiffres + " chiffres !\n");
+        for(noEssai = 0; noEssai < nbEssais; noEssai++)
+        {   System.out.print("\n\t--essai no." + (noEssai+1) + "--\n");
+            resultatEssai[noEssai] = "";
             resultatEssai[noEssai] = this.runTrial(noEssai);
             //System.out.print("\tresultat essai\t:  " + resultatEssai + "\n");
-            System.out.print(showResult(resultatEssai[noEssai]) + "\n");
+            System.out.print(showResult(resultatEssai[noEssai], "joueur ") + "\n");
             if(resultatEssai[noEssai].equals("===="))
             {   System.out.print("\t! vous avez gagné la partie en " + noEssai + " essais ! félicitations !");
                 this.showMenu();
@@ -99,7 +95,7 @@ public class ChallengerMode extends AbstractMode
     {   resultatEssai[noEssai] = "";
         this.inputDigits();
         this.convertDigits();
-        return this.computeTrial(noEssai);
+        return(this.computeTrial(noEssai));
     }
     /**/
 
@@ -112,7 +108,7 @@ public class ChallengerMode extends AbstractMode
             else
                 resultatEssai[noEssai] += "+";
         }
-        return resultatEssai[noEssai];
+        return(resultatEssai[noEssai]);
     }
     /**/
 

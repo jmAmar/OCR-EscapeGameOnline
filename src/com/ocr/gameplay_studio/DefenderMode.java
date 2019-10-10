@@ -9,17 +9,11 @@ public class DefenderMode extends AbstractMode
         serieJoueur = new int[nbChiffres];
         serieEssais = new int[nbEssais][nbChiffres];
         serieCaracteres = new String[nbChiffres];
-        if(GameSetting.parametreDescription.equals("O"))
-            System.out.print(GameWording.DESCRIPTION_DEFENDER);
-        showMenu();
     }
     /**/
 
     protected void showDescription(boolean enabled)
-    {   if(enabled == true)
-        GameSetting.parametreDescription = "O";
-        else
-        GameSetting.parametreDescription = "N";
+    {   if(enabled == true) { System.out.print(GameWording.DESCRIPTION_CHALLENGER); }
     }
     /**/
 
@@ -31,14 +25,15 @@ public class DefenderMode extends AbstractMode
         System.out.print("\t\t\tvotre choix :  " + String.valueOf(choix));
         switch(choix)
         {   case 1:
-        {   System.out.println("  >> Lancer la Partie");
+        {   System.out.print("  >> Lancer la Partie\n");
+            System.out.print(GameWording.NOUVELLE_PARTIE + "\n");
             this.setPlayerDigits();
             this.showPlayerDigits();
             this.runMatch();
             break;
         }
             case 2:
-            {   System.out.println("  >> Quitter la Partie");
+            {   System.out.print("  >> Quitter la Partie");
                 new GameExecution().selectMode();
                 break;
             }
@@ -71,21 +66,22 @@ public class DefenderMode extends AbstractMode
     {   String chiffresJoueur = "";
         for(int i = 0; i < serieJoueur.length; i++)
             chiffresJoueur += serieJoueur[i];
-        System.out.print("\tvos " + nbChiffres + " chiffres\t:  " + chiffresJoueur + "\n");
+        System.out.print("\tcombinaison joueur\t:  " + chiffresJoueur + "\n");
     }
     /**/
 
     protected void runMatch()
-    {   System.out.print("\n\t! partie en " + nbEssais + "essais maximum !\n");
+    {   System.out.print("\n\t! partie en " + nbEssais + " essais maximum !");
+        System.out.print("\n\t! combinaisons de " + nbChiffres + " chiffres !\n");
         for(noEssai = 0; noEssai < nbEssais; noEssai++)
         {   System.out.print("\n\t--essai no." + (noEssai+1) + "--\n");
             resultatEssai[noEssai] = "";
             resultatEssai[noEssai] = this.runTrial(noEssai);
-            System.out.print("\tcombinaison\t\t:  ");
+            System.out.print("\tcombinaison logiciel:  ");
             for(noChiffre = 0; noChiffre < nbChiffres; noChiffre++)
                 System.out.print(combinaison[noChiffre]);
             //System.out.print("\tresultat\t\t:  " + resultatEssai[noEssai] + "\n");
-            System.out.print(showResult(resultatEssai[noEssai]) + "\n");
+            System.out.print(showResult(resultatEssai[noEssai], "logiciel") + "\n");
             if(resultatEssai[noEssai].equals("===="))
             {   System.out.print("\t! partie gagnée par le logiciel en " + (noEssai+1) + " essais !");
                 this.showMenu();
@@ -96,7 +92,8 @@ public class DefenderMode extends AbstractMode
     /**/
 
     protected String runTrial(int noEssai)
-    {   if(noEssai == 0)
+    {   resultatEssai[noEssai] = "";
+        if(noEssai == 0)
         {   for(int i = 0; i < nbChiffres; i++)
             {   combinaison[i] = 5;
                 serieEssais[noEssai][i] = combinaison[i];
@@ -171,38 +168,6 @@ public class DefenderMode extends AbstractMode
 
             }
         }
-        /*
-        else
-        {   String str = "";
-            serieChiffres = resultatEssai.split("");
-            for (noChiffre = 0; noChiffre < nbChiffres; noChiffre++)
-            {   str += noChiffre + ":" +combinaison[noChiffre] + ">";
-                switch (serieCaracteres[noChiffre])
-
-                {
-                    case "-":
-                    {   //System.out.print(serieCaracteres[noChiffre]);
-                        if ((combinaison[noChiffre] - 2) >= 0)
-                            combinaison[noChiffre] = combinaison[noChiffre] - 2;
-                        else
-                            combinaison[noChiffre] = combinaison[noChiffre] - 1;
-                        str += combinaison[noChiffre] + " / ";
-                        break;
-                    }
-                    case "+":
-                    {   //System.out.print(serieCaracteres[noChiffre]);
-                        if ((combinaison[noChiffre] + 2) <= 9)
-                            combinaison[noChiffre] = combinaison[noChiffre] + 2;
-                        else
-                            combinaison[noChiffre] = combinaison[noChiffre] + 1;
-                        str += combinaison[noChiffre] + " / ";
-                        break;
-                    }
-                }
-                System.out.print(str);
-            }
-        }
-        */
         return(this.computeTrial(noEssai));
     }
     /**/

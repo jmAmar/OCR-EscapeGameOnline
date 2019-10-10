@@ -28,15 +28,22 @@ public class ModeSelection
             case 1:
             {   System.out.println("  >> CHALLENGER");
                 ChallengerMode challenger = new ChallengerMode();
+                challenger.showDescription(GameSetting.parametreDescription.equals("O") ? true : false);
+                challenger.showMenu();
                 break;
             }
             case 2:
             {   System.out.println("  >> DEFENDER");
                 DefenderMode defender = new DefenderMode();
+                defender.showDescription(GameSetting.parametreDescription.equals("O") ? true : false);
+                defender.showMenu();
                 break;
             }
             case 3:
             {   System.out.println("  >> DUEL");
+                DuelMode duel = new DuelMode();
+                duel.showDescription(GameSetting.parametreDescription.equals("O") ? true : false);
+                duel.showMenu();
                 break;
             }
             default:

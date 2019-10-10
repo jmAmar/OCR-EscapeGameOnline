@@ -68,13 +68,19 @@ public class GameWording
     + "\nLe résultat final de la partie est celui du dernier essai."
     ;
 
+    static final String DESCRIPTION_DUEL
+    = "\n\t\t** Description du Mode Duel **"
+    + "\nVous, le joueur, et le logiciel jouez tour à tour."
+    + "\nLe premier à trouver la combinaison secrète de l'autre a gagné."
+    ;
+
     static final String NOUVELLE_PARTIE
-    = "\n\n\t\t** Nouvelle Partie **"
-    + "\n... La partie démarre ..."
+    /* = "\n\n\t\t** Nouvelle Partie **" */
+    = "\n... La partie démarre ...\n"
     ;
 
     static final String MENU_PARTIE_CHALLENGER
-    = "\n\n\t\t** Menu Partie Challenger**"
+    = "\n\n\t\t** Menu Partie Challenger **"
     + "\n- Lancer la Partie\t\t:  1"
     + "\n- Quitter la Partie\t\t:  2"
     + "\n- Quitter Challenger\t:  3"
@@ -82,10 +88,18 @@ public class GameWording
     ;
 
     static final String MENU_PARTIE_DEFENDER
-    = "\n\n\t\t** Menu Partie Defender**"
+    = "\n\n\t\t** Menu Partie Defender **"
     + "\n- Lancer la Partie\t\t:  1"
     + "\n- Quitter la Partie\t\t:  2"
-    + "\n- Quitter Challenger\t:  3"
+    + "\n- Quitter Defender\t:  3"
+    + "\n- Quitter le Jeu\t\t:  9"
+    ;
+
+    static final String MENU_PARTIE_DUEL
+    = "\n\n\t\t** Menu Partie Duel **"
+    + "\n- Lancer la Partie\t\t:  1"
+    + "\n- Quitter la Partie\t\t:  2"
+    + "\n- Quitter Duel\t\t\t:  3"
     + "\n- Quitter le Jeu\t\t:  9"
     ;
 

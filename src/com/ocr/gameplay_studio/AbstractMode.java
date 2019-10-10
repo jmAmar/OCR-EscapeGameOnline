@@ -30,17 +30,17 @@ public abstract class AbstractMode
     protected abstract String runTrial(int noEssai);
 
 
-    protected String showResult(String rslt)
+    protected String showResult(String rslt, String player)
     {   String string = "";
         for(int i = 0; i < 3; i++)
         {   if (i == 0 || i == 2)
-            {   string += "\n\t\t\t\t\t   ";
+            {   string += "\n\t\t\t\t\t\t   ";
                 for (int j = 0; j < rslt.length() + 6; j++)
                     string += "*";
             }
             else
             {   string += "\n\t";
-                string += "resultat\t\t:  *  " + rslt + "  *";
+                string += "resultat " + player + "\t:  *  " + rslt + "  *";
             }
         }
         return(string);
@@ -60,7 +60,7 @@ public abstract class AbstractMode
     /**/
 
     protected void inputDigits()
-    {   System.out.print("\n\tvos " + nbChiffres + " chiffres\t?  ");
+    {   System.out.print("\tcombinaison joueur\t?  ");
         saisieJoueur = GameExecution.scanner.next();
         //System.out.println(saisieJoueur + "  " + saisieJoueur.length());
         if(saisieJoueur.length() < nbChiffres)
