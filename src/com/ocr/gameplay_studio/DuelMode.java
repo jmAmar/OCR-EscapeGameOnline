@@ -79,7 +79,7 @@ public class DuelMode extends AbstractMode
 			resultatEssaiDuel[1][noEssai] = defender.runTrial(noEssai);
 			System.out.print(defender.showResult(resultatEssaiDuel[1][noEssai], "logiciel") + "\n");
 			if(resultatEssaiDuel[0][noEssai].equals("====") && resultatEssaiDuel[1][noEssai].equals("===="))
-			{   System.out.print("\n\t! partie gagnée par le joueur et le logiciel en " + noEssai + " essais ! égalité !");
+			{   System.out.print("\n\t! partie gagnée par le joueur et le logiciel en " + noEssai + " essais ! égalité !\n");
 				this.showMenu();
 				break;
 			}

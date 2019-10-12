@@ -1,54 +1,59 @@
 package com.ocr.gameplay_studio;
 
-import java.util.Scanner;
-import java.util.Properties;
+import java.util.*;
 import java.io.FileOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
 public class GameSetting
 {
-	protected static String parametreDescription;
-	protected static int nombreEssais;
-	protected static int nombreChiffres;
+	protected static final String ESCAPE_GAME_ONLINE_PROPERTIES = "EscapeGameOnline.properties";
+	protected static final String IS_DESCRIPTION_ENABLE = "IS_DESCRIPTION_ENABLE";
+	protected static final String NUMBER_OF_TRIALS = "NUMBER_OF_TRIALS";
+	protected static final String NUMBER_OF_DIGITS = "NUMBER_OF_DIGITS";
+	//
+	protected static boolean isDescriptionEnable;
+	protected static int numberOfTrials;
+	protected static int numberOfDigits;
+	//
+	protected static HashMap<String,String> settingHashmap;
 
 
-	public GameSetting()
-	{   parametreDescription    = "O";
-		nombreEssais            = 10;
-		nombreChiffres          = 4;
-	}
-	/**/
-
-	public static void showMenu()
-	{   setDescriptionParameter();
-		setNumberOfTrials();
-		setNumberOfDigits();
+	protected static void showMenu()
+	{   newIsDescriptionEnable();
+		newNumberOfTrials();
+		newNumberOfDigits();
 		saveSetting();
 	}
 	/**/
 
-	public static void setDescriptionParameter()
-	{   System.out.print("\n- Afficher les Descriptions (O/N)\t?  ");
-		parametreDescription = GameExecution.scanner.next();
-		parametreDescription = parametreDescription.toUpperCase();
-		if(!parametreDescription.equals("N"))
-			parametreDescription = "O";
-		System.out.print("- Afficher les Descriptions (O/N)\t:  " + parametreDescription + "\n");
+	protected static void setIsDescriptionEnable()
+	{   isDescriptionEnable = Boolean.valueOf(settingHashmap.get(IS_DESCRIPTION_ENABLE));
 	}
 	/**/
-	public static String getDescriptionParameter()
-	{   return(parametreDescription);
+	protected static void newIsDescriptionEnable()
+	{   System.out.print("\n- Afficher les Descriptions (O/N)\t?  ");
+		String reponse = GameExecution.scanner.next();
+		reponse = reponse .toUpperCase();
+		if(reponse.equals("N")) { isDescriptionEnable = false; }
+		else { isDescriptionEnable = true; }
+	}
+	/**/
+	protected static boolean getIsDescriptionEnable()
+	{   return(isDescriptionEnable);
 	}
 	/**/
 
-	public static void setNumberOfTrials()
-	{   System.out.print("\n- Nombre d'Essais / Partie\t\t\t?  ");
+	protected static void setNumberOfTrials()
+	{   numberOfTrials = Integer.valueOf(settingHashmap.get(NUMBER_OF_TRIALS));
+	}
+	/**/
+	protected static void newNumberOfTrials()
+	{   System.out.print("- Nombre d'Essais / Partie\t\t\t?  ");
 		try
-		{   nombreEssais = GameExecution.scanner.nextInt();
-			if(nombreEssais <= 0 || nombreEssais > 10)
-				nombreEssais = 10;
-			System.out.print("- nombre d'Essais / Partie\t\t\t:  " + nombreEssais + "\n");
+		{   numberOfTrials = GameExecution.scanner.nextInt();
+			if(numberOfTrials <= 0 || numberOfTrials > 10)
+				numberOfTrials = 10;
 		}
 		catch(Exception Err)
 		{   System.out.print("\t! saisie incorrecte !");
@@ -57,20 +62,21 @@ public class GameSetting
 		}
 	}
 	/**/
-	public static String getNumberOfTrials()
-	{	return(String.valueOf(nombreEssais));
+	protected static int getNumberOfTrials()
+	{	return(numberOfTrials);
 	}
 	/**/
 
-	public static void setNumberOfDigits()
-	{
-		System.out.print("\n- Nombre de Chiffres / Combinaison\t?  ");
+	protected static void setNumberOfDigits()
+	{   numberOfDigits = Integer.valueOf(settingHashmap.get(NUMBER_OF_DIGITS));
+	}
+	/**/
+	protected static void newNumberOfDigits()
+	{   System.out.print("- Nombre de Chiffres / Combinaison\t?  ");
 		try
-		{
-			nombreChiffres = GameExecution.scanner.nextInt();
-			if (nombreChiffres <= 0 || nombreChiffres > 10)
-				nombreChiffres = 4;
-			System.out.print("- Nombre de Chiffres / Combinaison\t:  " + nombreChiffres + "\n");
+		{   numberOfDigits = GameExecution.scanner.nextInt();
+			if (numberOfDigits <= 0 || numberOfDigits > 10)
+				numberOfDigits = 4;
 		}
 		catch(Exception Err)
 		{   System.out.print("\t! saisie incorrecte !");
@@ -79,18 +85,18 @@ public class GameSetting
 		}
 	}
 	/**/
-	public static String getNumberOfDigits()
-	{	return(String.valueOf(nombreChiffres));
+	public static int getNumberOfDigits()
+	{	return(numberOfDigits);
 	}
 	/**/
 
 	protected static void saveSetting()
 	{   Properties properties = new Properties();
 		try
-		{   properties.setProperty("parametreDescription", getDescriptionParameter());
-			properties.setProperty("nombreEssais", String.valueOf(getNumberOfTrials()));
-			properties.setProperty("nombreChiffres", String.valueOf(getNumberOfDigits()));
-			properties.store(new FileOutputStream("EscapeGameOnline.properties") ,  "EscapeGameOnline Properties");
+		{   properties.setProperty(IS_DESCRIPTION_ENABLE, String.valueOf(getIsDescriptionEnable()));
+			properties.setProperty(NUMBER_OF_TRIALS, String.valueOf(getNumberOfTrials()));
+			properties.setProperty(NUMBER_OF_DIGITS, String.valueOf(getNumberOfDigits()));
+			properties.store(new FileOutputStream(ESCAPE_GAME_ONLINE_PROPERTIES) ,  "EscapeGameOnline Properties");
 		}
 		catch(IOException ioE)
 		{   ioE.printStackTrace();
@@ -98,42 +104,43 @@ public class GameSetting
 	}
 	/**/
 
-	protected static String readProperties()
+
+	protected static void readProperties()
 	{   Properties properties = new Properties();
-		String propertiesString = "";
+		settingHashmap = new HashMap<>();
 		try
-		{
-			properties.load(new FileInputStream("EscapeGameOnline.properties"));
-			//
-			propertiesString
-			+= "- Afficher les Descriptions\t\t\t:  "
-			+  properties.getProperty("parametreDescription", "O") + "\n"
-			;
-			propertiesString
-			+= "- Nombre d'Essais / Partie\t\t\t:  "
-			+  properties.getProperty("nombreEssais", "10") + "\n"
-			;
-			propertiesString
-			+= "- Nombre de Chiffres / Combinaison\t:  "
-			+  properties.getProperty("nombreChiffres", "4") + "\n"
-			;
+		{   properties.load(new FileInputStream(ESCAPE_GAME_ONLINE_PROPERTIES));
+			settingHashmap.put(IS_DESCRIPTION_ENABLE, properties.getProperty(IS_DESCRIPTION_ENABLE, "true"));
+			settingHashmap.put(NUMBER_OF_TRIALS, properties.getProperty(NUMBER_OF_TRIALS, "10"));
+			settingHashmap.put(NUMBER_OF_DIGITS, properties.getProperty(NUMBER_OF_DIGITS, "4"));
 		}
-		catch(IOException ioE)
-		{   ioE.printStackTrace();
+		catch(Exception Err)
+		{   Err.printStackTrace();
 		}
-		return(propertiesString);
 	}
 	/**/
 
-	protected static String readProperty(String property, String value)
+
+	protected static String readProperty(String property)
 	{   Properties properties = new Properties();
 		try
-		{   properties.load(new FileInputStream("EscapeGameOnline.properties"));
+		{   properties.load(new FileInputStream(ESCAPE_GAME_ONLINE_PROPERTIES));
 		}
 		catch(IOException ioE)
 		{   ioE.printStackTrace();
 		}
-		return(properties.getProperty(property, value));
+		return(properties.getProperty(property));
+	}
+	/**/
+
+	protected static void showSetting()
+	{   readProperties();
+		String propertiesString
+		= "\n- Afficher les Descriptions\t\t\t:  " +  (settingHashmap.get(IS_DESCRIPTION_ENABLE).equals("true") ? "Oui" : "Non")
+		+ "\n- Nombre d'Essais / Partie\t\t\t:  " +  settingHashmap.get(NUMBER_OF_TRIALS)
+		+ "\n- Nombre de Chiffres / Combinaison\t:  " +  settingHashmap.get(NUMBER_OF_DIGITS)
+		;
+		System.out.print(propertiesString + "\n");
 	}
 	/**/
 

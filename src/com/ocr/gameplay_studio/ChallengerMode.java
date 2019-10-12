@@ -83,7 +83,7 @@ public class ChallengerMode extends AbstractMode
             //System.out.print("\tresultat essai\t:  " + resultatEssai + "\n");
             System.out.print(showResult(resultatEssai[noEssai], "joueur ") + "\n");
             if(resultatEssai[noEssai].equals("===="))
-            {   System.out.print("\t! vous avez gagné la partie en " + noEssai + " essais ! félicitations !");
+            {   System.out.print("\t! vous avez gagné la partie en " + noEssai + " essais ! félicitations !\n");
                 this.showMenu();
                 break;
             }

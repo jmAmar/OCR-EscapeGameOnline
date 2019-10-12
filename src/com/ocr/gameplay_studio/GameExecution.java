@@ -1,5 +1,6 @@
 package com.ocr.gameplay_studio;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class GameExecution
@@ -7,10 +8,10 @@ public class GameExecution
 	protected static Scanner scanner;
 	protected ModeSelection modeSelection;
 
-	void start()
+	protected void start()
 	{   this.showWelcome();
 		scanner = new Scanner(System.in);
-		new GameSetting();
+		this.setSetting();
 		this.showDescription();
 		this.showSetting();
 		this.changeSetting();
@@ -18,49 +19,54 @@ public class GameExecution
 		this.selectMode();
 	}
 
-	void showWelcome()
+	protected void showWelcome()
 	{   System.out.println(GameWording.BIENVENUE);
 	}
 	/**/
 
-	void showDescription()
-	{   GameSetting.parametreDescription = GameSetting.readProperty("parametreDescription" , GameSetting.getDescriptionParameter());
-		if(GameSetting.parametreDescription.equals("O")) { System.out.print(GameWording.DESCRIPTION_JEU); }
+	protected void showDescription()
+	{   System.out.println(GameSetting.getIsDescriptionEnable());
+		if(GameSetting.settingHashmap.get("IS_DESCRIPTION_ENABLE").equals("true")) { System.out.print(GameWording.DESCRIPTION_JEU); }
 	}
 
-	void showSetting()
+	protected void showSetting()
 	{   System.out.print("\n\n\t\t** Paramétrage du Jeu **\n");
-		System.out.print(GameSetting.readProperties());
+		GameSetting.showSetting();
 	}
 	/**/
 
-	void setSetting()
+	protected void setSetting()
+	{   GameSetting.readProperties();
+		GameSetting.setIsDescriptionEnable();
+		GameSetting.setNumberOfTrials();
+		GameSetting.setNumberOfDigits();
+	}
+	/**/
+
+	protected void newSetting()
 	{   GameSetting.showMenu();
 	}
 	/**/
 
-	void changeSetting()
-	{   System.out.print("\n* Modifier ces Paramètres (O/N)\t?  ");
+	protected void changeSetting()
+	{   System.out.print("\n* Modifier ces Paramètres (O/N)\t\t?  ");
 		String reponseJoueur = scanner.next();
 		reponseJoueur = reponseJoueur.toUpperCase();
-		System.out.print("* Modifier ces Paramètres (O/N)\t:  " + reponseJoueur + "\n");
-		if(reponseJoueur.equals("O")) { this.setSetting(); }
+		System.out.print("* Modifier ces Paramètres (O/N)\t\t:  " + reponseJoueur + "\n");
+		if(reponseJoueur.equals("O")) { this.newSetting(); }
 	}
 	/**/
 
-	void readSetting()
-	{}
-
-	void selectMode()
+	protected void selectMode()
 	{   modeSelection.selectMode();
 	}
 	/**/
 
-	void changeMode()
+	protected void changeMode()
 	{   modeSelection.selectMode();}
 	/**/
 
-	void quit()
+	protected void quit()
 	{   scanner.close();
 		System.out.print(GameWording.AU_REVOIR);
 		System.exit(0);

@@ -5,9 +5,9 @@ import java.util.Scanner;
 public abstract class AbstractMode
 {
     protected int choix = -1;
-	protected int nbEssais = Integer.parseInt(GameSetting.readProperty("nombreEssais" , GameSetting.getNumberOfTrials()));
+	protected int nbEssais = GameSetting.getNumberOfTrials();
 	protected int noEssai = 1;
-    protected int nbChiffres = Integer.parseInt(GameSetting.readProperty("nombreChiffres" , GameSetting.getNumberOfDigits()));
+    protected int nbChiffres = GameSetting.getNumberOfDigits();
     protected int noChiffre = 1;
 
     protected int[][] serieEssais;

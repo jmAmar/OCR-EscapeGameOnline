@@ -1,7 +1,5 @@
 package com.ocr.gameplay_studio;
 
-import java.util.Scanner;
-
 public class ModeSelection
 {
     //private Scanner scanner ;
@@ -28,21 +26,21 @@ public class ModeSelection
             case 1:
             {   System.out.println("  >> CHALLENGER");
                 ChallengerMode challenger = new ChallengerMode();
-                challenger.showDescription(GameSetting.parametreDescription.equals("O") ? true : false);
+                challenger.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
                 challenger.showMenu();
                 break;
             }
             case 2:
             {   System.out.println("  >> DEFENDER");
                 DefenderMode defender = new DefenderMode();
-                defender.showDescription(GameSetting.parametreDescription.equals("O") ? true : false);
+                defender.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
                 defender.showMenu();
                 break;
             }
             case 3:
             {   System.out.println("  >> DUEL");
                 DuelMode duel = new DuelMode();
-                duel.showDescription(GameSetting.parametreDescription.equals("O") ? true : false);
+                duel.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
                 duel.showMenu();
                 break;
             }

@@ -13,7 +13,7 @@ public class DefenderMode extends AbstractMode
     /**/
 
     protected void showDescription(boolean enabled)
-    {   if(enabled == true) { System.out.print(GameWording.DESCRIPTION_CHALLENGER); }
+    {  if(enabled == true) { System.out.print(GameWording.DESCRIPTION_DEFENDER); }
     }
     /**/
 
@@ -83,7 +83,7 @@ public class DefenderMode extends AbstractMode
             //System.out.print("\tresultat\t\t:  " + resultatEssai[noEssai] + "\n");
             System.out.print(showResult(resultatEssai[noEssai], "logiciel") + "\n");
             if(resultatEssai[noEssai].equals("===="))
-            {   System.out.print("\t! partie gagnée par le logiciel en " + (noEssai+1) + " essais !");
+            {   System.out.print("\t! partie gagnée par le logiciel en " + (noEssai+1) + " essais !\n");
                 this.showMenu();
                 break;
             }
