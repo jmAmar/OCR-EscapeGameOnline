@@ -1,10 +1,10 @@
-#Jeu:&nbsp;&nbsp;**EscapeGameOnline**
+# Jeu:&nbsp;&nbsp;**EscapeGameOnline**
 
-##Editeur:&nbsp;&nbsp;*Gameplay Studio*
+## Editeur:&nbsp;&nbsp;*Gameplay Studio*
 
-###Programmeur:&nbsp;&nbsp;jmAmar (OpenClassrooms)
+### Programmeur:&nbsp;&nbsp;jmAmar (OpenClassrooms)
 
-###Version:&nbsp;&nbsp;1.0 -Octobre 2019-
+### Version:&nbsp;&nbsp;1.0 -Octobre 2019-
 
 -----
 
