@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="OCR-EscapeGameOnline:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb50bebe-3139-4946-8c66-243572ac32cd" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="31" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="OCR-EscapeGameOnline" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\_MAVEN_\-REPOSITORY-" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1RHYTdP4OIR688KtJdL4Nf3wgNX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tst" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\src\main\resources" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\src\main\resources\img" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\.idea" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\old" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\src\main\resources" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\old" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\.idea\libraries" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn test" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar">
+    <configuration name="EscapeGameOnline" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ocr.gameplay_studio.EscapeGameOnline" />
+      <module name="OCR-EscapeGameOnline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocr.gameplay_studio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OCR-EscapeGameOnline-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/OCR-EscapeGameOnline-1.0-SNAPSHOT.jar" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OCR-EscapeGameOnline [clean]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="true" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.EscapeGameOnline" />
+      <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT.jar" />
+      <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <item itemvalue="Maven.OCR-EscapeGameOnline [clean]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+        <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT.jar" />
+        <item itemvalue="Application.EscapeGameOnline" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb50bebe-3139-4946-8c66-243572ac32cd" name="Default Changelist" comment="" />
+      <created>1569325499827</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569325499827</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src/OCR-EscapeGameOnline" />
+      <path value="$PROJECT_DIR$/src" />
+    </ignored-roots>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OCR_EscapeGameOnline$OCR_EscapeGameOnline_1_0_SNAPSHOT_jar.ic" NAME="OCR-EscapeGameOnline-1.0-SNAPSHOT.jar Coverage Results" MODIFIED="1572358084318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OCR_EscapeGameOnline$.ic" NAME=" Coverage Results" MODIFIED="1572353731626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
