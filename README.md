@@ -49,7 +49,7 @@ Les paramètres du jeu sont stockés dans un fichier de configuration. Au démar
 vous avez la possibilité de les conserver ou de les modifier.
 
 -----
-Présenation du Menu de Paramétrage puis du Menu de d'Exécution du Jeu :
+Présentation du Menu de Paramétrage puis du Menu de d'Exécution du Jeu :
 
 ![Paramètres de Configuration](src/main/resources/img/ParamètresConfiguration.PNG)
 
