@@ -3,6 +3,7 @@ package com.ocr.gameplay_studio;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -138,7 +139,9 @@ public class GameSetting
 	{   Properties properties = new Properties();
 		settingHashmap = new HashMap<>();
 		try
-		{   properties.load(new FileInputStream(ESCAPE_GAME_ONLINE_PROPERTIES));
+		{
+			InputStream stream = GameSetting.class.getClassLoader().getResourceAsStream(ESCAPE_GAME_ONLINE_PROPERTIES);
+			properties.load(stream);
 			settingHashmap.put(IS_DEVElOPER_MODE_ENABLE, properties.getProperty(IS_DEVElOPER_MODE_ENABLE, "false"));
 			settingHashmap.put(IS_DESCRIPTION_ENABLE, properties.getProperty(IS_DESCRIPTION_ENABLE, "true"));
 			settingHashmap.put(NUMBER_OF_TRIALS, properties.getProperty(NUMBER_OF_TRIALS, "10"));

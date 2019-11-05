@@ -1,0 +1,205 @@
+2019-10-30 14:25:35 INFO  GameLogging:11 - Game Start
+2019-10-30 14:25:35 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:25:35 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:26:11 INFO  GameLogging:11 - Game Start
+2019-10-30 14:26:11 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:26:11 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:28:15 INFO  GameLogging:11 - Game Start
+2019-10-30 14:28:15 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:28:15 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:28:31 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:28:39 WARN  GameLogging:15 - Scanner Close
+2019-10-30 14:28:39 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:34:23 INFO  GameLogging:11 - Game Start
+2019-10-30 14:34:23 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:34:23 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:34:51 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:35:02 WARN  GameLogging:15 - Scanner Close
+2019-10-30 14:35:02 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:38:49 INFO  GameLogging:11 - Game Start
+2019-10-30 14:38:49 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:38:49 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:39:11 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:41:35 WARN  GameLogging:15 - Scanner Close
+2019-10-30 14:41:35 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:41:40 INFO  GameLogging:11 - Game Start
+2019-10-30 14:41:40 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:41:40 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:43:20 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:43:23 WARN  GameLogging:15 - Scanner Close
+2019-10-30 14:43:23 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:43:26 INFO  GameLogging:11 - Game Start
+2019-10-30 14:43:26 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:43:26 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:44:09 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:44:13 WARN  GameLogging:15 - Scanner Close
+2019-10-30 14:44:13 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:47:04 INFO  GameLogging:11 - Game Start
+2019-10-30 14:47:04 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:47:04 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:47:12 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:47:25 WARN  GameLogging:15 - Scanner Close
+2019-10-30 14:47:25 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:47:31 INFO  GameLogging:11 - Game Start
+2019-10-30 14:47:31 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:47:31 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:47:54 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:48:03 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 14:51:29 INFO  GameLogging:11 - Scanner Close
+2019-10-30 14:51:29 INFO  GameLogging:11 - Mode Exit
+2019-10-30 14:51:29 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:52:22 INFO  GameLogging:11 - Game Start
+2019-10-30 14:52:22 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:52:22 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:52:25 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:52:29 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 14:52:39 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:52:44 INFO  GameLogging:11 - Defender Mode
+2019-10-30 14:52:59 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:53:15 WARN  GameLogging:15 - Scanner Close
+2019-10-30 14:53:15 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:55:51 INFO  GameLogging:11 - Game Start
+2019-10-30 14:55:51 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:55:51 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:55:56 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:56:10 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 14:56:21 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:56:31 INFO  GameLogging:11 - Defender Mode
+2019-10-30 14:56:35 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:56:50 INFO  GameLogging:11 - Duel Mode
+2019-10-30 14:56:54 INFO  GameLogging:11 - Scanner Close
+2019-10-30 14:56:54 INFO  GameLogging:11 - Mode Exit
+2019-10-30 14:56:54 INFO  GameLogging:11 - Game Exit
+2019-10-30 14:59:18 INFO  GameLogging:11 - Game Start
+2019-10-30 14:59:18 INFO  GameLogging:11 - Scanner start
+2019-10-30 14:59:18 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 14:59:21 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:59:31 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 14:59:54 INFO  GameLogging:11 - Mode Selection
+2019-10-30 14:59:57 INFO  GameLogging:11 - Defender Mode
+2019-10-30 15:00:10 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:00:15 INFO  GameLogging:11 - Duel Mode
+2019-10-30 15:00:22 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:00:54 WARN  GameLogging:15 - Scanner Close
+2019-10-30 15:00:54 INFO  GameLogging:11 - Game Exit
+2019-10-30 15:03:06 INFO  GameLogging:11 - Game Start
+2019-10-30 15:03:06 INFO  GameLogging:11 - Scanner start
+2019-10-30 15:03:06 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 15:03:11 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:03:23 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 15:03:34 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:03:46 INFO  GameLogging:11 - Defender Mode
+2019-10-30 15:04:12 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:04:19 INFO  GameLogging:11 - Duel Mode
+2019-10-30 15:04:25 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:04:54 WARN  GameLogging:15 - Scanner Close
+2019-10-30 15:04:54 INFO  GameLogging:11 - Game Exit
+2019-10-30 15:07:25 INFO  GameLogging:11 - Game Start
+2019-10-30 15:07:25 INFO  GameLogging:11 - Scanner start
+2019-10-30 15:07:25 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 15:07:28 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:07:45 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 15:07:50 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:07:59 INFO  GameLogging:11 - Defender Mode
+2019-10-30 15:08:03 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:08:21 INFO  GameLogging:11 - Duel Mode
+2019-10-30 15:08:25 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:08:28 WARN  GameLogging:15 - Scanner Close
+2019-10-30 15:08:28 INFO  GameLogging:11 - Game Exit
+2019-10-30 15:09:17 INFO  GameLogging:11 - Game Start
+2019-10-30 15:09:17 INFO  GameLogging:11 - Scanner start
+2019-10-30 15:09:17 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 15:09:20 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:09:23 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 15:13:45 INFO  GameLogging:11 - Scanner Close
+2019-10-30 15:13:45 INFO  GameLogging:11 - Mode Exit
+2019-10-30 15:13:45 INFO  GameLogging:11 - Game Exit
+2019-10-30 15:14:17 INFO  GameLogging:11 - Game Start
+2019-10-30 15:14:17 INFO  GameLogging:11 - Scanner start
+2019-10-30 15:14:17 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 15:14:20 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:14:24 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 15:16:25 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:16:29 INFO  GameLogging:11 - Defender Mode
+2019-10-30 15:17:28 INFO  GameLogging:11 - Scanner Close
+2019-10-30 15:17:28 INFO  GameLogging:11 - Mode Exit
+2019-10-30 15:17:28 INFO  GameLogging:11 - Game Exit
+2019-10-30 15:19:57 INFO  GameLogging:11 - Game Start
+2019-10-30 15:19:57 INFO  GameLogging:11 - Scanner start
+2019-10-30 15:19:57 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 15:20:00 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:20:03 INFO  GameLogging:11 - Defender Mode
+2019-10-30 15:21:03 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:21:06 INFO  GameLogging:11 - Defender Mode
+2019-10-30 15:21:32 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:21:35 INFO  GameLogging:11 - Duel Mode
+2019-10-30 15:23:10 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:23:14 WARN  GameLogging:15 - Scanner Close
+2019-10-30 15:23:14 INFO  GameLogging:11 - Game Exit
+2019-10-30 15:26:48 INFO  GameLogging:11 - Game Start
+2019-10-30 15:26:48 INFO  GameLogging:11 - Scanner start
+2019-10-30 15:26:48 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-30 15:26:52 INFO  GameLogging:11 - Mode Selection
+2019-10-30 15:26:59 INFO  GameLogging:11 - Challenger Mode
+2019-10-30 15:28:06 INFO  GameLogging:11 - Scanner Close
+2019-10-30 15:28:06 INFO  GameLogging:11 - Mode Exit
+2019-10-30 15:28:06 INFO  GameLogging:11 - Game Exit
+2019-10-31 11:57:34 INFO  GameLogging:11 - Game Start
+2019-10-31 11:57:34 INFO  GameLogging:11 - Scanner start
+2019-10-31 11:57:34 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-10-31 11:57:41 INFO  GameLogging:11 - Mode Selection
+2019-10-31 11:58:00 WARN  GameLogging:15 - Scanner Close
+2019-10-31 11:58:00 INFO  GameLogging:11 - Game Exit
+2019-11-04 16:27:03 INFO  GameLogging:11 - Game Start
+2019-11-04 16:27:03 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:27:03 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:27:13 INFO  GameLogging:11 - Game Start
+2019-11-04 16:27:13 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:27:13 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:28:05 INFO  GameLogging:11 - Game Start
+2019-11-04 16:28:05 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:28:05 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:31:48 INFO  GameLogging:11 - Game Start
+2019-11-04 16:31:48 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:31:48 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:35:35 INFO  GameLogging:11 - Game Start
+2019-11-04 16:35:35 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:35:35 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:41:57 INFO  GameLogging:11 - Game Start
+2019-11-04 16:41:57 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:41:57 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:45:59 INFO  GameLogging:11 - Game Start
+2019-11-04 16:45:59 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:45:59 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:46:00 INFO  GameLogging:11 - Game Start
+2019-11-04 16:46:00 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:46:00 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:46:07 INFO  GameLogging:11 - Game Start
+2019-11-04 16:46:07 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:46:07 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:46:18 INFO  GameLogging:11 - Mode Selection
+2019-11-04 16:46:23 WARN  GameLogging:15 - Scanner Close
+2019-11-04 16:46:23 INFO  GameLogging:11 - Game Exit
+2019-11-04 16:49:41 INFO  GameLogging:11 - Game Start
+2019-11-04 16:49:41 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:49:41 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:51:06 INFO  GameLogging:11 - Game Start
+2019-11-04 16:51:06 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:51:06 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:53:09 INFO  GameLogging:11 - Game Start
+2019-11-04 16:53:09 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:53:09 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 16:53:38 INFO  GameLogging:11 - Game Start
+2019-11-04 16:53:38 INFO  GameLogging:11 - Scanner start
+2019-11-04 16:53:38 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 17:09:05 INFO  GameLogging:11 - Game Start
+2019-11-04 17:09:05 INFO  GameLogging:11 - Scanner start
+2019-11-04 17:09:05 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 17:09:16 INFO  GameLogging:11 - Game Start
+2019-11-04 17:09:16 INFO  GameLogging:11 - Scanner start
+2019-11-04 17:09:16 INFO  GameLogging:11 - Setting Load from propertiesFile
+2019-11-04 17:09:35 INFO  GameLogging:11 - Mode Selection
+2019-11-04 17:09:44 INFO  GameLogging:11 - Challenger Mode
+2019-11-04 17:09:58 INFO  GameLogging:11 - Scanner Close
+2019-11-04 17:09:58 INFO  GameLogging:11 - Mode Exit
+2019-11-04 17:09:58 INFO  GameLogging:11 - Game Exit

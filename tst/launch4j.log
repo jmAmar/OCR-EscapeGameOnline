@@ -1,0 +1,76 @@
+
+
+Version:	3.12
+CmdLine:	D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst\EscapeGameOnline-1.0-jar-with-dependencies.exe --l4j-debug
+WOW64:		yes
+Working dir:	D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst\.
+Java min ver:	1.000.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Check launcher:	C:\JAVA\jre1.8.0_212\bin\javaw.exe (OK)
+Match:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_202
+Check launcher:	C:\JAVA\jre1.8.0_202\bin\javaw.exe (OK)
+Match:		1.008.000_202
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_211
+Check launcher:	C:\PROGRA~1\Java\JRE18~1.0_2\bin\javaw.exe (OK)
+Match:		1.008.000_211
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_212
+Check launcher:	C:\JAVA\jre1.8.0_212\bin\javaw.exe (OK)
+Match:		1.008.000_212
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_202
+Ignore:		1.008.000_202
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_212
+Ignore:		1.008.000_212
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\13
+Check launcher:	C:\JAVA\jdk-13\bin\javaw.exe (OK)
+Match:		1.013.000
+Runtime used:	1.013.000 (64-bit)
+Launcher:	C:\JAVA\jdk-13\bin\javaw.exe
+Launcher args:	-jar "D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst\EscapeGameOnline-1.0-jar-with-dependencies.exe"
+Args length:	104/32768 chars
+Exit code:	0
+
+
+Version:	3.12
+CmdLine:	D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst\EscapeGameOnline-1.0-jar-with-dependencies.exe --l4j-debug
+WOW64:		yes
+Working dir:	D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst\.
+Java min ver:	1.000.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Check launcher:	C:\JAVA\jre1.8.0_212\bin\javaw.exe (OK)
+Match:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_202
+Check launcher:	C:\JAVA\jre1.8.0_202\bin\javaw.exe (OK)
+Match:		1.008.000_202
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_211
+Check launcher:	C:\PROGRA~1\Java\JRE18~1.0_2\bin\javaw.exe (OK)
+Match:		1.008.000_211
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_212
+Check launcher:	C:\JAVA\jre1.8.0_212\bin\javaw.exe (OK)
+Match:		1.008.000_212
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_202
+Ignore:		1.008.000_202
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_212
+Ignore:		1.008.000_212
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\13
+Check launcher:	C:\JAVA\jdk-13\bin\javaw.exe (OK)
+Match:		1.013.000
+Runtime used:	1.013.000 (64-bit)
+Launcher:	C:\JAVA\jdk-13\bin\javaw.exe
+Launcher args:	-jar "D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst\EscapeGameOnline-1.0-jar-with-dependencies.exe"
+Args length:	104/32768 chars
+Exit code:	0
