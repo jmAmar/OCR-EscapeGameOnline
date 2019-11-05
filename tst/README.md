@@ -1,10 +1,10 @@
-#Jeu:&nbsp;&nbsp;**EscapeGameOnline**
+# Jeu:&nbsp;&nbsp;**EscapeGameOnline**
 
-##Editeur:&nbsp;&nbsp;*Gameplay Studio*
+## Editeur:&nbsp;&nbsp;*Gameplay Studio*
 
-###Programmeur:&nbsp;&nbsp;jmAmar (OpenClassrooms)
+### Programmeur:&nbsp;&nbsp;jmAmar (OpenClassrooms)
 
-###Version:&nbsp;&nbsp;1.0 -Octobre 2019-
+### Version:&nbsp;&nbsp;1.0 -Octobre 2019-
 
 -----
 
@@ -30,9 +30,10 @@ Un chiffre peut être redondant une ou plusieurs fois dans une même série (exe
  
  Lancement du Jeu :
  
+ - Option 1)
+ 
  Placez les fichiers :
  1. OCR-EscapeGameOnline.jar
- 2. EscapeGameOnlineProperties
  3. README.md
  
  dans un répertoire où vous souhaitez que le jeu s'exécute.
@@ -40,6 +41,14 @@ Un chiffre peut être redondant une ou plusieurs fois dans une même série (exe
  Puis ouvrez votre Invite de Commande (sous Windows) ou votre Terminal (sous MacOS ou Linux) et saisissez l'instruction suivante :
  
  &nbsp;&nbsp;java -jar OCR-EscapeGameOnline.jar
+ 
+ - Option 2)
+ 
+ Sous Windows Uniquement.
+ 
+ Placez le fichier *EscapeGameOnline-1.0.exe* sur le Bureau ou dans un répertoire de votre choix.
+ 
+ Double-cliquez sur cet exécutable.
 
 -----
 
@@ -51,7 +60,7 @@ vous avez la possibilité de les conserver ou de les modifier.
 -----
 Présenation du Menu de Paramétrage puis du Menu de d'Exécution du Jeu :
 
-![Paramètres de Configuration](img/ParamètresConfiguration.PNG)
+![Paramètres de Configuration](src/main/resources/img/ParamètresConfiguration.PNG)
 
  -----
  
