@@ -30,9 +30,10 @@ Un chiffre peut être redondant une ou plusieurs fois dans une même série (exe
  
  Lancement du Jeu :
  
+ - Option 1)
+ 
  Placez les fichiers :
  1. OCR-EscapeGameOnline.jar
- 2. EscapeGameOnlineProperties
  3. README.md
  
  dans un répertoire où vous souhaitez que le jeu s'exécute.
@@ -40,6 +41,14 @@ Un chiffre peut être redondant une ou plusieurs fois dans une même série (exe
  Puis ouvrez votre Invite de Commande (sous Windows) ou votre Terminal (sous MacOS ou Linux) et saisissez l'instruction suivante :
  
  &nbsp;&nbsp;java -jar OCR-EscapeGameOnline.jar
+ 
+ - Option 2)
+ 
+ Sous Windows Uniquement.
+ 
+ Placez le fichier *EscapeGameOnline-1.0.exe* sur le Bureau ou dans un répertoire de votre choix.
+ 
+ Double-cliquez sur cet exécutable.
 
 -----
 
