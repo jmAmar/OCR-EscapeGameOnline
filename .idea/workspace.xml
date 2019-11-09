@@ -14,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="31" />
+    <option name="myElementSize" value="53" />
   </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="hideWarnings" value="true" />
@@ -52,7 +52,7 @@
   <component name="ProjectId" id="1RHYTdP4OIR688KtJdL4Nf3wgNX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tst" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -68,8 +68,8 @@
       <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\old" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst" />
       <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\src\main\resources" />
+      <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\tst" />
       <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline" />
       <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\old" />
       <recent name="D:\_FAFIEC-OCR_\Workspace\OCR-EscapeGameOnline\.idea\libraries" />
@@ -92,19 +92,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar">
-    <configuration name="EscapeGameOnline" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ocr.gameplay_studio.EscapeGameOnline" />
-      <module name="OCR-EscapeGameOnline" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ocr.gameplay_studio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="JAR Application.EscapeGameOnline-1.0-jar-with-dependencies.jar">
+    <configuration name="EscapeGameOnline-1.0-jar-with-dependencies.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/EscapeGameOnline-1.0-jar-with-dependencies.jar" />
+      <method v="2" />
     </configuration>
     <configuration name="OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" />
@@ -114,6 +105,14 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/OCR-EscapeGameOnline-1.0-SNAPSHOT.jar" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OCR-EscapeGameOnline-1.0-jar-with-dependencies.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/OCR-EscapeGameOnline-1.0-jar-with-dependencies.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OCR-EscapeGameOnline-1.0.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/OCR-EscapeGameOnline-1.0.jar" />
       <method v="2" />
     </configuration>
     <configuration name="OCR-EscapeGameOnline [clean]" type="MavenRunConfiguration" factoryName="Maven">
@@ -142,16 +141,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.EscapeGameOnline" />
       <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT.jar" />
       <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0.jar" />
+      <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-jar-with-dependencies.jar" />
+      <item itemvalue="JAR Application.EscapeGameOnline-1.0-jar-with-dependencies.jar" />
       <item itemvalue="Maven.OCR-EscapeGameOnline [clean]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+        <item itemvalue="JAR Application.EscapeGameOnline-1.0-jar-with-dependencies.jar" />
+        <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-jar-with-dependencies.jar" />
+        <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0.jar" />
         <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT.jar" />
-        <item itemvalue="Application.EscapeGameOnline" />
+        <item itemvalue="JAR Application.OCR-EscapeGameOnline-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -190,5 +193,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OCR_EscapeGameOnline$OCR_EscapeGameOnline_1_0_SNAPSHOT_jar.ic" NAME="OCR-EscapeGameOnline-1.0-SNAPSHOT.jar Coverage Results" MODIFIED="1572358084318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OCR_EscapeGameOnline$.ic" NAME=" Coverage Results" MODIFIED="1572353731626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OCR_EscapeGameOnline$EscapeGameOnline_1_0_jar_with_dependencies_jar.ic" NAME="EscapeGameOnline-1.0-jar-with-dependencies.jar Coverage Results" MODIFIED="1573310978604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

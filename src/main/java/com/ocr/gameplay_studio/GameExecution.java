@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class GameExecution
 {
 	protected static Scanner scanner;
-	protected ModeSelection modeSelection;
 
 	/**
 	 * When the game starts :
@@ -26,14 +25,13 @@ public class GameExecution
 	 */
 	protected void start()
 	{   GameLogging.logInfo("Game Start");
-		this.showWelcome();
 		GameLogging.logInfo("Scanner start");
 		scanner = new Scanner(System.in);
+		this.showWelcome();
 		this.loadSetting();
 		this.showDescription();
 		this.showSetting();
-		this.changeSetting();
-		modeSelection = new ModeSelection();
+		this.editSetting();
 		this.selectMode();
 	}
 
@@ -48,8 +46,7 @@ public class GameExecution
 	}
 
 	protected void showSetting()
-	{   System.out.print("\n\t\t** Paramétrage du Jeu **");
-		GameSetting.showSetting();
+	{  GameSetting.showSetting();
 	}
 	/**/
 
@@ -67,32 +64,15 @@ public class GameExecution
 	}
 	/**/
 
-	protected void newSetting()
-	{   GameSetting.showMenu();
-	}
-	/**/
-
-	/**
-	 * @see GameExecution#newSetting()
-	 */
-	protected void changeSetting()
-	{   System.out.print("\n* Modifier ces Paramètres (O/N)\t\t?  ");
-		String reponseJoueur = scanner.next().toUpperCase();
-		System.out.print("* Modifier ces Paramètres (O/N)\t\t:  " + reponseJoueur + "\n");
-		if(reponseJoueur.equals("O")) { this.newSetting(); }
+	protected void editSetting()
+	{   GameSetting.editSetting();
 	}
 	/**/
 
 	protected void selectMode()
-	{   modeSelection.selectMode();
+	{   ModeSelection modeSelection = new ModeSelection();
+		modeSelection.selectMode();
 	}
-	/**/
-
-	/**
-	 * @see GameExecution#selectMode()
-	 */
-	protected void changeMode()
-	{   modeSelection.selectMode();}
 	/**/
 
 	protected void quit()

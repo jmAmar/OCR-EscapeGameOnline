@@ -47,11 +47,16 @@ public class ChallengerMode extends AbstractMode
     {   System.out.print(GameWording.MENU_PARTIE_CHALLENGER);
         System.out.print("\n\n\tvotre choix\t?  ");
         try { choix = GameExecution.scanner.nextInt(); }
-        catch(Exception Err) {}
-        System.out.print("\tvotre choix\t:  " + String.valueOf(choix));
+        catch(Exception Err)
+        {   GameLogging.logError("Selection Error : errClass:" + Err.getClass()
+                + " / errCause:" + Err.getCause()
+                + " / errMsg:" + Err.getMessage());
+            GameExecution.scanner.nextLine();
+        }
+        System.out.print("\n\tvotre choix\t:  " + String.valueOf(choix));
         switch(choix)
         {   case 1:
-            {   System.out.print("  >> Lancer la Partie\n");
+            {   System.out.print("  >> Lancer une Partie\n");
                 System.out.print(GameWording.NOUVELLE_PARTIE);
                 this.setRandomDigits();
                 this.showDeveloperMode(GameSetting.getIsDeveloperModeEnable());
@@ -60,14 +65,18 @@ public class ChallengerMode extends AbstractMode
                 break;
             }
             case 2:
-            {   System.out.print("  >> Quitter la Partie");
-                new GameExecution().selectMode();
-                break;
-            }
-            case 3:
             {   System.out.print("  >> Quitter Challenger\n");
                 ModeSelection selection = new ModeSelection();
                 selection.selectMode();
+                break;
+            }
+            case 8:
+            {   System.out.print("  >> Modifier la Configuration\n");
+                GameSetting.showSetting();
+                GameSetting.showMenu();
+                GameSetting.saveSetting();
+                this.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
+                this.showMenu();
                 break;
             }
             case 9:
@@ -77,7 +86,8 @@ public class ChallengerMode extends AbstractMode
             }
             default:
             {   System.out.print("  ! choix invalide !\n");
-                new ChallengerMode();
+                this.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
+                this.showMenu();
                 break;
             }
         }
@@ -85,7 +95,7 @@ public class ChallengerMode extends AbstractMode
     /**/
 
     protected void runMatch()
-    {    System.out.print("\n\t! partie en " + nbEssais + " essais maximum !");
+    {   System.out.print("\n\t! partie en " + nbEssais + " essais maximum !");
         System.out.print("\n\t! combinaisons de " + nbChiffres + " chiffres !\n");
         for(noEssai = 0; noEssai < nbEssais; noEssai++)
         {   System.out.print("\n\t--essai no." + (noEssai+1) + "--\n");
@@ -98,7 +108,13 @@ public class ChallengerMode extends AbstractMode
                 this.showMenu();
                 break;
             }
+            else if(noEssai >= nbEssais-1)
+            {   System.out.print("\n\t! vous avez perdu la partie après " + (noEssai+1) + " essais autorisés ! désolé !\n");
+                this.showMenu();
+                break;
+            }
         }
+
     }
     /**/
 

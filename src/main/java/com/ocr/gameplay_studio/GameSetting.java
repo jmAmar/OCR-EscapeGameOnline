@@ -1,9 +1,6 @@
 package com.ocr.gameplay_studio;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -119,29 +116,22 @@ public class GameSetting
 	}
 	/**/
 
-	protected static void saveSetting()
-	{   Properties properties = new Properties();
-		try
-		{   properties.setProperty(IS_DEVElOPER_MODE_ENABLE, String.valueOf(getIsDeveloperModeEnable()));
-			properties.setProperty(IS_DESCRIPTION_ENABLE, String.valueOf(getIsDescriptionEnable()));
-			properties.setProperty(NUMBER_OF_TRIALS, String.valueOf(getNumberOfTrials()));
-			properties.setProperty(NUMBER_OF_DIGITS, String.valueOf(getNumberOfDigits()));
-			properties.store(new FileOutputStream(ESCAPE_GAME_ONLINE_PROPERTIES) ,  "EscapeGameOnline Properties");
-		}
-		catch(IOException ioE)
-		{   ioE.printStackTrace();
-		}
-	}
-	/**/
-
-
 	protected static void readProperties()
 	{   Properties properties = new Properties();
 		settingHashmap = new HashMap<>();
 		try
-		{
-			InputStream stream = GameSetting.class.getClassLoader().getResourceAsStream(ESCAPE_GAME_ONLINE_PROPERTIES);
-			properties.load(stream);
+		{   File propertiesFile = new File(ESCAPE_GAME_ONLINE_PROPERTIES);
+			if(propertiesFile.exists())
+			{   try
+				{   FileInputStream inStream = new FileInputStream(propertiesFile);
+					properties.load(inStream);
+				}
+				catch (FileNotFoundException fnfE) { fnfE.printStackTrace(); }
+			}
+			else
+			{   InputStream inStream = GameSetting.class.getClassLoader().getResourceAsStream(ESCAPE_GAME_ONLINE_PROPERTIES);
+				properties.load(inStream);
+			}
 			settingHashmap.put(IS_DEVElOPER_MODE_ENABLE, properties.getProperty(IS_DEVElOPER_MODE_ENABLE, "false"));
 			settingHashmap.put(IS_DESCRIPTION_ENABLE, properties.getProperty(IS_DESCRIPTION_ENABLE, "true"));
 			settingHashmap.put(NUMBER_OF_TRIALS, properties.getProperty(NUMBER_OF_TRIALS, "10"));
@@ -153,28 +143,46 @@ public class GameSetting
 	}
 	/**/
 
-
-	protected static String readProperty(String property)
-	{   Properties properties = new Properties();
-		try
-		{   properties.load(new FileInputStream(ESCAPE_GAME_ONLINE_PROPERTIES));
-		}
-		catch(IOException ioE)
-		{   ioE.printStackTrace();
-		}
-		return(properties.getProperty(property));
-	}
-	/**/
-
 	protected static void showSetting()
 	{   readProperties();
 		String propertiesString
-		= "\n- Mode Développeur\t\t\t:  " +  (settingHashmap.get(IS_DEVElOPER_MODE_ENABLE).equals("true") ? "Oui" : "Non")
+		= "\n\t\t** Paramétrage du Jeu **"
+		+ "\n- Mode Développeur\t\t\t:  " +  (settingHashmap.get(IS_DEVElOPER_MODE_ENABLE).equals("true") ? "Oui" : "Non")
 		+ "\n- Afficher les Descriptions\t\t:  " +  (settingHashmap.get(IS_DESCRIPTION_ENABLE).equals("true") ? "Oui" : "Non")
 		+ "\n- Nombre d'Essais / Partie\t\t:  " +  settingHashmap.get(NUMBER_OF_TRIALS)
 		+ "\n- Nombre de Chiffres / Combinaison\t:  " +  settingHashmap.get(NUMBER_OF_DIGITS)
 		;
 		System.out.print(propertiesString + "\n");
+	}
+	/**/
+
+	protected static void editSetting()
+	{   boolean validiteReponse = true;
+		System.out.print("\n* Modifier ces Paramètres (O/N)\t\t?  ");
+		String reponseJoueur = GameExecution.scanner.next().toUpperCase();
+		if(!reponseJoueur.equals("O") && !reponseJoueur.equals("N"))
+		{   reponseJoueur += "  >> ! saisie incorrecte !";
+			validiteReponse = false;
+		}
+		System.out.print("* Modifier ces Paramètres (O/N)\t\t:  " + reponseJoueur + "\n");
+		if(reponseJoueur.equals("O")) { showMenu(); }
+		else if(validiteReponse == false) { showSetting(); editSetting(); }
+	}
+	/**/
+
+	protected static void saveSetting()
+	{   Properties properties = new Properties();
+		try
+		{   properties.setProperty(IS_DEVElOPER_MODE_ENABLE, String.valueOf(getIsDeveloperModeEnable()));
+			properties.setProperty(IS_DESCRIPTION_ENABLE, String.valueOf(getIsDescriptionEnable()));
+			properties.setProperty(NUMBER_OF_TRIALS, String.valueOf(getNumberOfTrials()));
+			properties.setProperty(NUMBER_OF_DIGITS, String.valueOf(getNumberOfDigits()));
+			File propertiesFile = new File(ESCAPE_GAME_ONLINE_PROPERTIES);
+			properties.store(new FileOutputStream(propertiesFile) ,  "EscapeGameOnline Properties");
+		}
+		catch(IOException ioE)
+		{   ioE.printStackTrace();
+		}
 	}
 	/**/
 

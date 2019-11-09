@@ -8,14 +8,18 @@ package com.ocr.gameplay_studio;
  */
 public class ModeSelection
 {
-    private int choixJoueur = -1;
-
     public void selectMode()
-    {   GameLogging.logInfo("Mode Selection");
+    {   int choixJoueur = -1;
+        GameLogging.logInfo("Mode Selection");
         System.out.print(GameWording.MENU_JEU);
         System.out.print("\n\n\tvotre choix\t?  ");
         try { choixJoueur = GameExecution.scanner.nextInt(); }
-        catch(Exception Err) { GameLogging.logError("Selection Error: " + Err.getMessage()); }
+        catch(Exception Err)
+        {    GameLogging.logError("Selection Error : errClass:" + Err.getClass()
+                + " / errCause:" + Err.getCause()
+                + " / errMsg:" + Err.getMessage());
+            GameExecution.scanner.nextLine();
+        }
         System.out.print("\tvotre choix\t:  " + String.valueOf(choixJoueur));
         switch(choixJoueur)
         {   case 9:
@@ -52,9 +56,9 @@ public class ModeSelection
                 break;
             }
             default:
-            {   System.out.print("\n  ! choix invalide !");
+            {   System.out.print("  >> ! choix invalide !\n");
                 GameLogging.logWarning("Invalid Input");
-                new GameExecution().selectMode();
+                this.selectMode();
                 break;
             }
         }

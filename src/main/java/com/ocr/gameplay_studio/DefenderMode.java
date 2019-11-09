@@ -1,5 +1,7 @@
 package com.ocr.gameplay_studio;
 
+import java.util.concurrent.TimeUnit;
+
 public class DefenderMode extends AbstractMode
 {
     public DefenderMode()
@@ -21,26 +23,35 @@ public class DefenderMode extends AbstractMode
     {   System.out.print(GameWording.MENU_PARTIE_DEFENDER);
         System.out.print("\n\n\tvotre choix\t?  ");
         try { choix = GameExecution.scanner.nextInt(); }
-        catch(Exception Err) {}
+        catch(Exception Err)
+        {    GameLogging.logError("Selection Error : errClass:" + Err.getClass()
+                + " / errCause:" + Err.getCause()
+                + " / errMsg:" + Err.getMessage());
+            GameExecution.scanner.nextLine();
+        }
         System.out.print("\tvotre choix\t:  " + String.valueOf(choix));
         switch(choix)
         {   case 1:
-        {   System.out.print("  >> Lancer la Partie\n");
+            {   System.out.print("  >> Lancer une Partie\n");
             System.out.print(GameWording.NOUVELLE_PARTIE + "\n");
             this.setPlayerDigits();
             this.showPlayerDigits();
             this.runMatch();
             break;
-        }
-            case 2:
-            {   System.out.print("  >> Quitter la Partie");
-                new GameExecution().selectMode();
-                break;
             }
-            case 3:
+            case 2:
             {   System.out.print("  >> Quitter Defender\n");
                 ModeSelection selection = new ModeSelection();
                 selection.selectMode();
+                break;
+            }
+            case 8:
+            {   System.out.print("  >> Modifier la Configuration\n");
+                GameSetting.showSetting();
+                GameSetting.showMenu();
+                GameSetting.saveSetting();
+                this.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
+                this.showMenu();
                 break;
             }
             case 9:
@@ -50,7 +61,8 @@ public class DefenderMode extends AbstractMode
             }
             default:
             {   System.out.print("  ! choix invalide !\n");
-                new ChallengerMode();
+                this.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
+                this.showMenu();
             }
         }
     }
@@ -80,10 +92,14 @@ public class DefenderMode extends AbstractMode
             System.out.print("\tcombinaison logiciel\t:  ");
             for(noChiffre = 0; noChiffre < nbChiffres; noChiffre++)
                 System.out.print(combinaison[noChiffre]);
-            //System.out.print("\tresultat\t\t:  " + resultatEssai[noEssai] + "\n");
             System.out.print(showResult(resultatEssai[noEssai], "logiciel") + "\n");
             if(resultatEssai[noEssai].equals("===="))
-            {   System.out.print("\n\t! partie gagnée par le logiciel en " + (noEssai+1) + " essais !\n");
+            {   System.out.print("\n\t! partie gagnée par le logiciel en " + (noEssai+1) + " essais ! désolé !\n");
+                this.showMenu();
+                break;
+            }
+            else if(noEssai >= nbEssais-1)
+            {   System.out.print("\n\t! vous avez gagné la partie après " + (noEssai+1) + " essais par le logiciel ! félicitations !\n");
                 this.showMenu();
                 break;
             }
@@ -181,7 +197,15 @@ public class DefenderMode extends AbstractMode
             else
                 resultatEssai[noEssai] += "+";
         }
+        delayTime(3);
         return resultatEssai[noEssai];
+    }
+    /**/
+
+    private void delayTime(int nbSeconds)
+    {   try { TimeUnit.SECONDS.sleep(nbSeconds); }
+        catch(Exception Err)
+        {   Thread.currentThread().interrupt(); }
     }
     /**/
 

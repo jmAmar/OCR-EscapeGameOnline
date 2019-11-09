@@ -30,7 +30,12 @@ public class DuelMode extends AbstractMode
 	{   System.out.print(GameWording.MENU_PARTIE_DUEL);
 		System.out.print("\n\n\tvotre choix\t?  ");
 		try { choix = GameExecution.scanner.nextInt(); }
-		catch(Exception Err) {}
+		catch(Exception Err)
+		{    GameLogging.logError("Selection Error : errClass:" + Err.getClass()
+				+ " / errCause:" + Err.getCause()
+				+ " / errMsg:" + Err.getMessage());
+			GameExecution.scanner.nextLine();
+		}
 		System.out.print("\tvotre choix\t:  " + String.valueOf(choix));
 		switch(choix)
 		{   case 1:
@@ -44,14 +49,18 @@ public class DuelMode extends AbstractMode
 				break;
 			}
 			case 2:
-			{   System.out.print("  >> Quitter la Partie");
-				new GameExecution().selectMode();
-				break;
-			}
-			case 3:
 			{   System.out.print("  >> Quitter Duel\n");
 				ModeSelection selection = new ModeSelection();
 				selection.selectMode();
+				break;
+			}
+			case 8:
+			{   System.out.print("  >> Modifier la Configuration\n");
+				GameSetting.showSetting();
+				GameSetting.showMenu();
+				GameSetting.saveSetting();
+				this.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
+				this.showMenu();
 				break;
 			}
 			case 9:
@@ -61,7 +70,8 @@ public class DuelMode extends AbstractMode
 			}
 			default:
 			{   System.out.print("  ! choix invalide !\n");
-				new ChallengerMode();
+				this.showDescription(GameSetting.getIsDescriptionEnable() ? true : false);
+				this.showMenu();
 			}
 		}
 	}
@@ -93,15 +103,20 @@ public class DuelMode extends AbstractMode
 				this.showMenu();
 				break;
 			}
+			else if(noEssai >= nbEssais-1)
+			{   System.out.print("\n\t! partie perdue par le joueur et le logiciel après " + (noEssai+1) + " essais autorisés !\n");
+				this.showMenu();
+				break;
+			}
 
 		}
 	}
 	/**/
 
 	protected String runTrial(int noEssai)
-	{
-		return("toto");
+	{   return("toto");
 	}
 	/**/
+
 }
 /**/

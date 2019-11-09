@@ -81,25 +81,25 @@ public class GameWording
 
     static final String MENU_PARTIE_CHALLENGER
     = "\n\t\t** Menu Partie Challenger **"
-    + "\n- Lancer la Partie\t:  1"
-    + "\n- Quitter la Partie\t:  2"
-    + "\n- Quitter Challenger\t:  3"
+    + "\n- Lancer une Partie\t:  1"
+    + "\n- Quitter Challenger\t:  2"
+    + "\n- Modifier la Config.\t:  8"
     + "\n- Quitter le Jeu\t:  9"
     ;
 
     static final String MENU_PARTIE_DEFENDER
     = "\n\t\t** Menu Partie Defender **"
-    + "\n- Lancer la Partie\t:  1"
-    + "\n- Quitter la Partie\t:  2"
-    + "\n- Quitter Defender\t:  3"
+    + "\n- Lancer une Partie\t:  1"
+    + "\n- Quitter Defender\t:  2"
+    + "\n- Modifier la Config.\t:  8"
     + "\n- Quitter le Jeu\t:  9"
     ;
 
     static final String MENU_PARTIE_DUEL
     = "\n\t\t** Menu Partie Duel **"
-    + "\n- Lancer la Partie\t:  1"
-    + "\n- Quitter la Partie\t:  2"
-    + "\n- Quitter Duel\t\t:  3"
+    + "\n- Lancer une Partie\t:  1"
+    + "\n- Quitter Duel\t:  2"
+    + "\n- Modifier la Config.\t:  8"
     + "\n- Quitter le Jeu\t:  9"
     ;
 
