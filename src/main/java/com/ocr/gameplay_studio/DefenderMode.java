@@ -117,7 +117,7 @@ public class DefenderMode extends AbstractMode
         }
         else
         {   serieCaracteres = resultatEssai[noEssai-1].split("");
-            for (noChiffre = 0; noChiffre < nbChiffres; noChiffre++)
+            for(noChiffre = 0; noChiffre < nbChiffres; noChiffre++)
             {   if(serieCaracteres[noChiffre].equals("-"))
                 {
                     switch (serieEssais[noEssai - 1][noChiffre])

@@ -98,7 +98,7 @@ public class GameWording
     static final String MENU_PARTIE_DUEL
     = "\n\t\t** Menu Partie Duel **"
     + "\n- Lancer une Partie\t:  1"
-    + "\n- Quitter Duel\t:  2"
+    + "\n- Quitter Duel\t\t:  2"
     + "\n- Modifier la Config.\t:  8"
     + "\n- Quitter le Jeu\t:  9"
     ;
